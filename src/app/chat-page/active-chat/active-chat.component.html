@@ -1,0 +1,26 @@
+<div class="messages" #scroll>
+    <div class="row" *ngFor="let message of messages">
+        <div class="col">
+            <div class="recieved-message" *ngIf="authService.user.value.email != message.fromUser">
+                <span>{{message.fromUser}}</span>
+                <p>{{message.message}}</p>
+            </div>
+            <div class="sended-message" *ngIf="authService.user.value.email == message.fromUser">
+                {{message.message}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="text-message">  
+        <input type="text" class="form-control" (keyup.enter)="addMessage()" [(ngModel)]="textMessage">
+    </div>
+    <div class="send-message">
+        <button class="btn btn-success send" type="submit" (click)="addMessage()">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>    
+

@@ -1,0 +1,48 @@
+.messages{
+    background-image: url('../../../assets/images/chat_Background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    max-height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.recieved-message{
+    background-color: teal;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 3px;
+    span{
+        font-weight: bold;
+        color: violet;
+    }
+    p{
+        margin: 0;
+    }
+}
+.sended-message{
+    background-color: yellowgreen;
+    text-align: right;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 6px;
+}
+.send{
+    border-radius: 50%;
+}
+.text-message{
+    width: 80%;
+    margin-right: 5%;
+    margin-left: 15px;
+}
+.send-message{
+    width: 10%;
+}

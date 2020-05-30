@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="form" (ngSubmit) ="onSubmit()">
+                <div class="form-group">
+                    <label for="name">Group Name</label>
+                    <input type="text" id="name" formControlName="name" class="form-control" required>
+                </div>
+
+                <div formArrayName="users" *ngFor="let friend of getFormArray();let i = index">
+                    <label for="i" style="margin-right: 20px;width: 20%;">
+                        {{all_friends[i].name}}
+                    </label>
+                    <input id="i" type="checkbox" [formControlName]="i">
+                </div>
+                    
+                
+                <button type="submit" [disabled]="!form.valid" class="btn btn-success">Create</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<ul class="list-group" *ngFor="let friend of all_friends;let i = index">
+    <a class="list-group-item list-group-item-action clearfix" routerLink='{{i}}'>
+        <div class="float-left">
+            <h4  class="list-group-item-head">{{friend.name}}</h4>
+        </div>
+        
+        <span class="float-right">
+            <img class="img-fluid rounded-circle" style="max-height: 50px;" src='../../../assets/images/lena.jpg' alt="User Image">
+        </span>
+    </a>
+</ul>
+
+<h3 *ngIf="all_friends.length == 0">Please Add Friends</h3>

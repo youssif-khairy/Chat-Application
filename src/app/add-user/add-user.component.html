@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngIf="error" class="alert alert-danger">
+                {{error}}
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" formControlName="email" required email>
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="!form.valid">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
